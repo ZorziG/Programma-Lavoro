@@ -2,7 +2,6 @@ from Conferma_salvataggio import salva
 from Mostra_lista import lista
 from datetime import date 
 
-
 def inserimento_anagrafica(df_anagrafica, FILE_PATH):
     inserimento = []
     antecedente = df_anagrafica["CODOTTICO"].iloc[len(df_anagrafica)-1]
