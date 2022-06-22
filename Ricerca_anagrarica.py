@@ -1,18 +1,11 @@
-from Mostra_lista import mostra_lista
+from Mostra_lista import mostra_lista, lista
 
 def ricerca_anagrafica(df_anagrafica):
-    lista = [
-        "CODOTTICO", "NOME", "IND", "CITTA",
-        "PR", "CAP", "TEL", "FAX", "CFISC",
-        "PIVA", "SCONTOGEN", "CODPAG", "PAGAMENTO",
-        "BANCA", "IBAN", "ABI", "CAB", "AGENZIA",
-        "FA", "SPEDI", "PAGCORR", "NOOK", "CODCPA",
-        "EMAIL", "PEC", "APPLICATOR",
-    ]
-    mostra_lista(lista)
+    lista()
+    mostra_lista()
     scelta_opzione = int(input("scegliere un numero: "))
     cercare = input("Digitare la ricerca da effettuare: ").upper()
-    for numero, nome in enumerate(lista, 1):
+    for numero, nome in enumerate(lista(), 1):
         if scelta_opzione == numero:
             if df_anagrafica[nome].dtypes != "object":
                 df_tipologia = df_anagrafica[nome].dtypes
